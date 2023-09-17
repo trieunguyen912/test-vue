@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="pt-10 text-white bg-start bg-cover bg-[url('/image/BG_footer.png')] md:bg-[url('/image/BG_footer_page.svg')] w-full md:h-[446px]"
+    class="pt-10 text-white bg-start bg-cover bg-[url('./image/BG_footer.png')] md:bg-[url('./image/BG_footer_page.svg')] w-full md:h-[446px]"
   >
     <div class="px-4 pb-[63px]">
       <div

@@ -3,7 +3,7 @@ export default {};
 </script>
 <template>
   <div
-    class="bg-start bg-cover bg-[url('/image/BG_mobile_2.png')] md:bg-[url('/image/BG.svg')] mb-[48px] w-full md:h-[989px]"
+    class="bg-start bg-cover bg-[url('./image/BG_mobile_2.png')] md:bg-[url('./image/BG.svg')] mb-[48px] w-full md:h-[989px]"
   >
     <Navbar class="pb-6" />
     <div class="pt-6">
