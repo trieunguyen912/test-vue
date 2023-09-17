@@ -1,0 +1,170 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.title-navbar {
+  font-size: 14px;
+
+  font-weight: 700;
+  line-height: 17.5px;
+}
+
+.title-content {
+  font-family: "Playfair Display";
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 50px; /* 125% */
+  letter-spacing: 0.6px;
+}
+
+.title-content-lock {
+  text-align: center;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.652px;
+}
+.title-lock {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  text-align: center;
+  line-height: normal;
+  font-weight: 900;
+  line-height: 45px;
+}
+.text-lock {
+  font-size: 12px;
+  line-height: normal;
+  font-weight: 700;
+
+  letter-spacing: -0.652px;
+}
+.text-about-blue {
+  color: #079bee;
+  font-family: " Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1px;
+}
+.text-about {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+.text-sm {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px; /* 125% */
+  letter-spacing: 0.9px;
+}
+.text-sm2 {
+  text-align: start;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.text-sm-bold {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.text-md-bold {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.text-md {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.text-lg {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 126%;
+}
+.label-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+
+.input::placeholder {
+  color: #545454;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.input:focus {
+  outline: 0px none #fff !important;
+}
+.input-footer::placeholder {
+  color: white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.input-footer:focus {
+  outline: 0px none #fff !important;
+}
+.shadow-card {
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+}
+.card:nth-child(2n-2) {
+  position: relative;
+  top: 35px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-color: "transparent";
+  background-position: center;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  color: "transparent";
+  border: none;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "" !important;
+  color: "transparent";
+}
+
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 40px;
+  background-color: "transparent";
+}
+
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-image: url("/image/arrow-square-left.png");
+}
+
+.swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background-image: url("/image/arrow-square-right.png");
+}
