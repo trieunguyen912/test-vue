@@ -1,19 +1,24 @@
 <script>
 export default {};
 </script>
+
 <template>
   <div
-    class="bg-start bg-cover bg-[url('./image/BG_mobile_2.png')] md:bg-[url('./image/BG.svg')] mb-[48px] w-full md:h-[989px]"
+    class="bg-start bg-cover bg-[url('./image/BG_mobile_2.png')] md:bg-[url('./image/BG.svg')] mb-[48px] xl:mb-[157px] w-full md:w-auto md:bg-center md:h-[989px]"
   >
     <Navbar class="pb-6" />
-    <div class="pt-6">
+    <div
+      class="pt-6 relative xl:pt-[132px] flex flex-wrap flex-col justify-center items-center"
+    >
       <div class="title-content text-white text-center px-6 pb-3">
-        We’re <br />
+        We’re <br class="md:hidden" />
         Getting Ready
       </div>
-      <div class="px-6 pt-6 pb-4">
+      <div
+        class="flex flex-wrap flex-col xl:backdrop-blur-[5px] xl:rounded-t-[80%] justify-center items-center xl:rounded-b-[80%] z-10 px-6 pt-6 pb-4 xl:px-30 xl:pt-5 xl:pb-[100px] 2xl:px-60 2xl:pt-10 2xl:pb-[200px]"
+      >
         <div
-          class="flex title-lock flex-wrap flex-row justify-between items-center rounded-[21px] bg-white px-6 py-[28px]"
+          class="flex title-lock 2xl:w-[756px] flex-wrap flex-row justify-between 2xl:mb-[97px] items-center rounded-[21px] bg-white px-6 2xl:px-[40px] 2xl:py-[26px] py-[28px]"
         >
           <div>
             <p>30</p>
@@ -35,16 +40,19 @@ export default {};
             <p class="text-lock">Second</p>
           </div>
         </div>
-        <div class="text-sm pt-10 text-white text-center">
+
+        <div
+          class="text-sm xl:w-[400px] 2xl:w-[600px] pt-10 2xl:pt-0 text-white text-center"
+        >
           We will back to something amazing. Getting the latest updates about
           our games. Please sign up to our newsletter.
         </div>
         <div
-          class="flex rounded-lg mt-4 bg-white flex-wrap flex-row justify-between items-center"
+          class="flex rounded-xl xl:w-[400px] 2xl:w-[600px] mt-4 xl:mt-7 bg-white flex-wrap flex-row justify-between items-center"
         >
           <input
             v-model="message"
-            class="rounded-lg input py-4 pl-[14px]"
+            class="rounded-xl 2xl:w-[25vw] input py-4 pl-[14px]"
             placeholder="Enter your email"
           />
           <img
@@ -57,7 +65,7 @@ export default {};
       <div class="px-4">
         <img
           src="/image/Fairy_mobile.png"
-          class="h-[265px] w-[342px]"
+          class="h-[265px] w-[342px] z-0 xl:h-[738px] xl:w-[938px] xl:left-[-200px] xl:top-[100px] xl:absolute"
           alt="Logo"
         />
       </div>

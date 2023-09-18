@@ -1,5 +1,5 @@
 <template>
-  <header class="relative">
+  <header class="z-20 relative">
     <nav class="bg-transparent border-gray-200">
       <div
         class="flex flex-wrap items-center justify-between lg:items-start mx-4 lg:mx-[79px] pt-[48px] lg:pt-[20px]"
@@ -31,7 +31,7 @@
           id="navbar-default"
         >
           <ul
-            class="absolute lg:relative title-navbar top-[0] left-[0] px-4 flex flex-col w-full h-[100vh] lg:p-0 border border-gray-100 bg-gray-50 lg:flex-row lg:space-x-10 lg:mt-0 lg:border-0 lg:bg-transparent"
+            class="absolute lg:relative title-navbar top-[0] left-[0] px-4 flex flex-col w-full h-[100vh] lg:h-auto lg:p-0 bg-gray-50 lg:flex-row lg:space-x-10 lg:mt-0 lg:border-0 lg:bg-transparent"
           >
             <li
               class="flex flex-wrap items-center justify-between pb-10 lg:hidden pt-12"
@@ -55,7 +55,7 @@
 
             <li
               @click="showMenu = !showMenu"
-              class="border-b-[1px] border-[rgba(238, 238, 238, 1)]"
+              class="border-b-[1px] md:border-0 border-[rgba(238, 238, 238, 1)]"
             >
               <a
                 href="#"
@@ -65,7 +65,7 @@
             </li>
             <li
               @click="showMenu = !showMenu"
-              class="border-b-[1px] border-[rgba(238, 238, 238, 1)]"
+              class="border-b-[1px] md:border-0 border-[rgba(238, 238, 238, 1)]"
             >
               <a
                 href="#"
@@ -75,7 +75,7 @@
             </li>
             <li
               @click="showMenu = !showMenu"
-              class="border-b-[1px] border-[rgba(238, 238, 238, 1)]"
+              class="border-b-[1px] md:border-0 border-[rgba(238, 238, 238, 1)]"
             >
               <a
                 href="#"
@@ -85,7 +85,7 @@
             </li>
             <li
               @click="showMenu = !showMenu"
-              class="border-b-[1px] border-[rgba(238, 238, 238, 1)]"
+              class="border-b-[1px] md:border-0 border-[rgba(238, 238, 238, 1)]"
             >
               <a
                 href="#"

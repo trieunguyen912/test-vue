@@ -37,19 +37,30 @@ export default {
 </script>
 
 <template>
-  <div class="pt-[48px] pb-10 bg-[rgba(246, 246, 246, 1))]">
-    <div class="title-content text-center pb-10">Our Partners</div>
+  <div class="mt-[48px] pb-10 lg:pb-[120px] bg-[#F6F6F6] lg:px-[190px]">
+    <div class="title-content text-center pb-10 lg:pb-20 lg:pt-[120px]">
+      Our Partners
+    </div>
     <swiper
       :navigation="true"
       :effect="coverflow"
       :grabCursor="true"
       :centeredSlides="true"
       :loop="true"
-      :speed="1000"
-      :slidesPerView="1.9"
+      :speed="500"
+      :breakpoints="{
+        '0': {
+          slidesPerView: 3,
+          spaceBetween: 12,
+        },
+        '1024': {
+          slidesPerView: auto,
+          spaceBetween: 40,
+        },
+      }"
       :coverflowEffect="{
         rotate: 0,
-        depth: 250,
+        depth: 100,
         slideShadows: false,
       }"
       :autoplay="{ delay: 5000 }"
@@ -57,11 +68,11 @@ export default {
       class="mySwiper text-center"
     >
       <swiper-slide
-        class="h-[72px] min-w-[180px]"
+        class="h-[72px] min-w-[180px] lg:h-[100px] lg:transition-none lg:max-w-[270px]"
         v-for="(logo, index) in logo"
         :key="index"
         ><img
-          class="h-[72px] min-w-[180px] object-contain"
+          class="h-[72px] min-w-[180px] lg:h-[100px] lg:max-w-[270px] object-contain"
           :src="`/image/${logo.img}`"
           alt="logo"
       /></swiper-slide>
