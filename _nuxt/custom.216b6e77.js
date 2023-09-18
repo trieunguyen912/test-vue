@@ -1,0 +1,1 @@
+import{_ as s,o,c as t,V as c,a}from"./entry.a326225d.js";const n={},r={class:"CustomLayout"},_=a("p",null,"custom",-1);function l(e,d){return o(),t("div",r,[_,c(e.$slots,"default")])}const f=s(n,[["render",l]]);export{f as default};
