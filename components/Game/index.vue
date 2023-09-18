@@ -93,16 +93,14 @@ export default {
   <div
     class="mx-4 lg:mx-0 pb-[48px] lg:flex lg:flex-wrap lg:flex-col lg:justify-center lg:items-center"
   >
-    <div class="title-content text-center">Our Games</div>
+    <div class="title-content text-center">{{ $t("title_game") }}</div>
     <div
       class="mx-4 label-text mt-4 mb-10 lg:max-w-[860px] text-center text-[#757575]"
     >
-      As a pioneer of mobile app gamification, we take pride in originality and
-      individuality, providing global players with state-of-the-art games that
-      feature splendid storylines, sensational sound effects and magnificent
-      animation that never cease to impress.
+      {{ $t("content_game") }}
     </div>
     <div
+      v-motion-slide-visible-bottom
       class="grid grid-row-6 md:grid-row-4 grid-cols-2 lg:mx-20 lg:my-20 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:gap-x-[40px] 2xl:gap-y-[40px] gap-x-[15px] gap-y-[20px]"
     >
       <div
