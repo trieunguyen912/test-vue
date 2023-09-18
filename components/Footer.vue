@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="pt-10 lg:pt-[104px] text-white bg-start bg-cover bg-[url('./image/BG_footer.png')] lg:bg-[url('./image/BG_footer_page.png')] w-full"
+    class="pt-10 lg:pt-[104px] text-white bg-start bg-cover bg-[url('/image/BG_footer.png')] lg:bg-[url('/image/BG_footer_page.png')] w-full"
   >
     <div
       class="px-4 xl:px-[60px] 2xl:px-[230px] pb-[63px] lg:pb-[60px] lg:flex lg:flex-wrap flex-col lg:flex-row lg:items-center lg:justify-between"
@@ -43,7 +43,9 @@
         class="lg:flex lg:flex-wrap flex-col lg:flex-row lg:items-start lg:justify-between"
       >
         <div class="pb-[78px] lg:pb-0">
-          <div class="text-start text-md-bold pb-5 lg:pb-10">Address</div>
+          <div class="text-start text-md-bold pb-5 lg:pb-10">
+            {{ $t("title_address") }}
+          </div>
 
           <div class="flex flex-wrap w-full flex-row pb-5 lg:pb-10">
             <div class="">
@@ -55,11 +57,10 @@
             </div>
             <div class="ml-2">
               <div class="text-md max-w-[282px]">
-                Valletta Buildings, South Street, Valletta - VLT 1103 Malta, US
+                {{ $t("content_address_us") }}
               </div>
               <div class="text-md max-w-[282px] mt-3">
-                24/7 access ensures operators' businesses runs smoothly all year
-                long.
+                {{ $t("content_address_vn") }}
               </div>
             </div>
           </div>
@@ -73,7 +74,7 @@
             </div>
             <div class="ml-2">
               <div class="text-md max-w-[282px] mt-3">
-                (+1) 555-0108-000 or (+236) 555-0108
+                {{ $t("content_phone") }}
               </div>
             </div>
           </div>
@@ -82,11 +83,12 @@
         <div
           class="lg:flex lg:flex-wrap flex-col lg:ml-10 max-w-[410px] lg:items-start lg:justify-start"
         >
-          <div class="text-start text-md-bold pb-5 lg:pb-10">Subscribe</div>
+          <div class="text-start text-md-bold pb-5 lg:pb-10">
+            {{ $t("title_subscribe") }}
+          </div>
 
           <div>
-            Subscribe to our newsletter and be the first to know about our
-            updates
+            {{ $t("content_subscribe") }}
           </div>
           <div
             class="flex rounded-lg mt-4 lg:mt-3 w-full bg-transparent border-gray-100 border-[1px] flex-wrap flex-row justify-between items-center"
@@ -94,7 +96,7 @@
             <input
               v-model="message"
               class="bg-transparent input-footer lg:w-[15vw] rounded-lg py-4 pl-[14px]"
-              placeholder="Enter your email"
+              :placeholder="`${$t(`placeholder_footer`)}`"
             />
             <img
               src="/image/arrow-right_footer.png"

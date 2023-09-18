@@ -36,7 +36,7 @@
             <li
               class="flex flex-wrap items-center justify-between pb-10 lg:hidden pt-12"
             >
-              <div>icon languaqe</div>
+              <IconLanguage />
               <button
                 @click="showMenu = !showMenu"
                 data-collapse-toggle="navbar-default"
@@ -58,9 +58,10 @@
               class="border-b-[1px] md:border-0 border-[rgba(238, 238, 238, 1)]"
             >
               <a
-                href="#"
-                class="block text-center pb-6 md:pt-6 text-black lg:text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
-                >ABOUT US</a
+                href="#about"
+                class="block text-center pb-10 lg:pb-6 md:pt-6 text-black lg:text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
+              >
+                {{ $t("about_us") }}</a
               >
             </li>
             <li
@@ -68,9 +69,9 @@
               class="border-b-[1px] md:border-0 border-[rgba(238, 238, 238, 1)]"
             >
               <a
-                href="#"
-                class="block text-center py-6 text-black lg:text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
-                >GAMES</a
+                href="#game"
+                class="block text-center py-10 lg:py-6 text-black lg:text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
+                >{{ $t("game") }}</a
               >
             </li>
             <li
@@ -78,9 +79,9 @@
               class="border-b-[1px] md:border-0 border-[rgba(238, 238, 238, 1)]"
             >
               <a
-                href="#"
-                class="block text-center py-6 text-black lg:text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
-                >PARTNERS</a
+                href="#partners"
+                class="block text-center py-10 lg:py-6 text-black lg:text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
+                >{{ $t("partners") }}</a
               >
             </li>
             <li
@@ -88,10 +89,13 @@
               class="border-b-[1px] md:border-0 border-[rgba(238, 238, 238, 1)]"
             >
               <a
-                href="#"
-                class="block text-center py-6 text-black lg:text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
-                >CONTACT US</a
+                href="#contact"
+                class="block text-center py-10 lg:py-6 text-black lg:text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
+                >{{ $t("contact_us") }}</a
               >
+            </li>
+            <li class="flex flex-wrap flex-row justify-center item-center">
+              <IconLanguage class="icon-language" />
             </li>
           </ul>
         </div>

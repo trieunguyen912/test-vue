@@ -37,11 +37,16 @@ export default {
 </script>
 
 <template>
-  <div class="mt-[48px] pb-10 lg:pb-[120px] bg-[#F6F6F6] lg:px-[190px]">
+  <div
+    class="pt-[40px] lg:mt-[128px] mt-[48px] pb-10 lg:pb-[120px] bg-[#F6F6F6] lg:px-[190px]"
+  >
     <div class="title-content text-center pb-10 lg:pb-20 lg:pt-[120px]">
-      Our Partners
+      {{ $t("title_partners") }}
     </div>
     <swiper
+      :observer="true"
+      :observeParents="true"
+      :parallax="true"
       :navigation="true"
       :effect="coverflow"
       :grabCursor="true"
@@ -54,7 +59,15 @@ export default {
           spaceBetween: 12,
         },
         '1024': {
-          slidesPerView: auto,
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+        '1280': {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+        '1580': {
+          slidesPerView: 5,
           spaceBetween: 40,
         },
       }"
@@ -68,11 +81,11 @@ export default {
       class="mySwiper text-center"
     >
       <swiper-slide
-        class="h-[72px] min-w-[180px] lg:h-[100px] lg:transition-none lg:max-w-[270px]"
+        class="h-[72px] min-w-[180px] 2xl:h-[100px] lg:transition-none 2xl:max-w-[270px]"
         v-for="(logo, index) in logo"
         :key="index"
         ><img
-          class="h-[72px] min-w-[180px] lg:h-[100px] lg:max-w-[270px] object-contain"
+          class="h-[72px] min-w-[180px] 2xl:h-[100px] 2xl:max-w-[270px] object-contain"
           :src="`/image/${logo.img}`"
           alt="logo"
       /></swiper-slide>
