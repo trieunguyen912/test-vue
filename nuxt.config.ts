@@ -41,6 +41,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
+  experimental: { inlineSSRStyles: false },
   css: ["~/assets/css/main.css"],
 });
