@@ -4,7 +4,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "NODE_OPTIONS=--max_old_space_size=8192 nuxt generate",
+    "generate_staging": "NUXT_MODE=staging nuxt generate --max-old-space-size=80096",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
