@@ -33,5 +33,7 @@
   "content_phone": "(+1) 555-0108-000 hoặc (+236) 555-0108",
   "content_subscribe": "Đăng ký nhận bản tin của chúng tôi và là người đầu tiên biết về các cập nhật của chúng tôi",
   "placeholder_footer": "Email",
+  "error_invalid":"Email không hợp lệ",
+  "error_check":"Vui lòng nhập email của bạn",
   "copyright": "2017 Copyright. Policy."
 }

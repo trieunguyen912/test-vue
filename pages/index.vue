@@ -30,12 +30,12 @@ export default {
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
         this.msg["email"] = "";
       } else {
-        this.msg["email"] = "Invalid email";
+        this.msg["email"] =  this.$t("error_invalid");
       }
     },
     handleSubmission() {
       if (this.email == "") {
-        this.msg["email"] = "Please input your email";
+        this.msg["email"] = this.$t("error_check") ;
       } else {
         this.icon = true;
       

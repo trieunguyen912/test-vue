@@ -118,6 +118,7 @@
                 </button>
               </div>
             </div>
+            
             <span class="text-[12px] text-[#EF5350]" v-if="msg.email">{{
               msg.email
             }}</span>
@@ -140,31 +141,41 @@ export default {
       icon: false,
     };
   },
+  
   watch: {
     email(value) {
       // binding this to the data value in the email input
       // this.email = value;
-      this.validateEmail(value);
+      if(value == ""){
+        this.msg["email"] = "";
+      }else{
+        this.validateEmail(value);
+      }
+      
     },
   },
   methods: {
+   
     validateEmail(value) {
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
         this.msg["email"] = "";
       } else {
-        this.msg["email"] = "Invalid Email";
+        this.msg["email"] =  this.$t("error_invalid");
       }
     },
     handleSubmission() {
       if (this.email == "") {
-        this.msg["email"] = "Invalid Email";
+        this.msg["email"] = this.$t("error_check") ;
+        
       } else {
         this.icon = true;
         alert(`Email: ${this.email} `);
-        this.email = "";
         setTimeout(() => (this.icon = false), 2000);
+        this.email = "";
       }
     },
   },
+  
 };
 </script>
+
