@@ -17,7 +17,12 @@ export default {
     email(value) {
       // binding this to the data value in the email input
       // this.email = value;
-      this.validateEmail(value);
+      if(value == ""){
+        this.msg["email"] = "";
+      }else{
+        this.validateEmail(value);
+      }
+      
     },
   },
   methods: {
@@ -25,17 +30,19 @@ export default {
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
         this.msg["email"] = "";
       } else {
-        this.msg["email"] = "Invalid Email";
+        this.msg["email"] = "Invalid email";
       }
     },
     handleSubmission() {
       if (this.email == "") {
-        this.msg["email"] = "Invalid Email";
+        this.msg["email"] = "Please input your email";
       } else {
         this.icon = true;
+      
         alert(`Email: ${this.email} `);
-        this.email = "";
         setTimeout(() => (this.icon = false), 2000);
+        this.email = '';
+        
       }
     },
     handleScroll: function () {

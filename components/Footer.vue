@@ -97,7 +97,7 @@
               <input
                 type="email"
                 v-model="email"
-                class="bg-transparent w-[270px] lg:w-[300px] input-footer 2xl:w-[25vw] rounded-lg py-4 pl-[14px]"
+                class="bg-transparent w-[270px] lg:w-[300px] input-footer 2xl:w-[340px] rounded-lg py-4 pl-[14px]"
                 :placeholder="`${$t(`placeholder_footer`)}`"
               />
 
