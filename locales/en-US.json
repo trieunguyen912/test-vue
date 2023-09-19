@@ -33,5 +33,7 @@
   "content_phone": "(+1) 555-0108-000 or (+236) 555-0108",
   "content_subscribe": "Subscribe to our newsletter and be the first to know about our updates",
   "placeholder_footer": "Enter your email",
+  "error_invalid":"Invalid email",
+  "error_check":"Please input your email",
   "copyright": "2017 Copyright. Policy."
 }
