@@ -91,7 +91,7 @@ export default {
 
 <template>
   <div
-    class="mx-4 lg:mx-0 pb-[48px] lg:flex lg:flex-wrap lg:flex-col lg:justify-center lg:items-center"
+    class="overflow-hidden mx-4 lg:mx-0 pb-[48px] lg:flex lg:flex-wrap lg:flex-col lg:justify-center lg:items-center"
   >
     <div class="title-content text-center">{{ $t("title_game") }}</div>
     <div
