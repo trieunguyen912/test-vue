@@ -3,7 +3,7 @@
 <template>
   <div class="mb-[48px] xl:px-[60px] 2xl:px-[380px]">
     <div class="grid grid-cols-1 xl:grid-cols-2 gap-x-[40px]">
-      <div>
+      <div v-motion-roll-left>
         <div class="mx-4 title-content">{{ $t("title_about") }}</div>
         <div class="mx-4 label-text mt-4 xl:mt-10 mb-10 text-[#757575]">
           {{ $t("content_about") }}
@@ -16,7 +16,8 @@
               class="flex flex-wrap flex-row justify-start items-end text-about-blue"
             >
               <p class="text-[44px] xl:text-[80px]">600</p>
-              <span class="text-[20px] xl:text-[40px]"> {{ $t("text_m") }}</span
+              <span class="text-[20px] xl:text-[40px] mb-2">
+                {{ $t("text_m") }}</span
               ><span class="text-[36px] xl:text-[70px]">+</span>
             </div>
             <div class="text-about">{{ $t("text_about_user") }}</div>
@@ -33,7 +34,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div v-motion-roll-right>
         <div
           class="w-full pt-10 xl:py-[113px] xl:px-[75px] xl:mt-0 px-4 mt-10 bg-[#EEE]"
         >

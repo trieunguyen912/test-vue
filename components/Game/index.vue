@@ -100,10 +100,10 @@ export default {
       {{ $t("content_game") }}
     </div>
     <div
-      v-motion-slide-visible-bottom
       class="grid grid-row-6 md:grid-row-4 grid-cols-2 lg:mx-20 lg:my-20 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:gap-x-[40px] 2xl:gap-y-[40px] gap-x-[15px] gap-y-[20px]"
     >
       <div
+        v-motion-roll-visible-top
         v-for="(task, index) in task"
         :key="index"
         class="relative card overflow-hidden rounded-[10px] max-w-[410px] shadow-card cursor-pointer"
