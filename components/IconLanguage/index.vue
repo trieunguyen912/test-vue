@@ -51,11 +51,11 @@ const language = computed({
           <div v-if="locale === 'en-US'">
             <img
               :src="`/image/tick.svg`"
-              class="h-[24px] w-[24px]"
+              class="h-[24px] w-[24px] mr-3"
               alt="logo"
             />
           </div>
-          <div v-else class="h-[24px] w-[24px]"></div>
+          <div v-else class="h-[24px] w-[24px] mr-3"></div>
           <div>
             <img
               :src="`/image/en-US.png`"
@@ -77,11 +77,11 @@ const language = computed({
           <div v-if="locale === 'vn-VN'">
             <img
               :src="`/image/tick.svg`"
-              class="h-[24px] w-[24px]"
+              class="h-[24px] w-[24px] mr-3"
               alt="logo"
             />
           </div>
-          <div v-else class="h-[24px] w-[24px]"></div>
+          <div v-else class="h-[24px] w-[24px] mr-3"></div>
           <div>
             <img
               :src="`/image/vn-VN.png`"

@@ -90,20 +90,38 @@
           <div>
             {{ $t("content_subscribe") }}
           </div>
-          <div
-            class="flex rounded-lg mt-4 lg:mt-3 w-full bg-transparent border-gray-100 border-[1px] flex-wrap flex-row justify-between items-center"
-          >
-            <input
-              v-model="message"
-              class="bg-transparent input-footer lg:w-[15vw] rounded-lg py-4 pl-[14px]"
-              :placeholder="`${$t(`placeholder_footer`)}`"
-            />
-            <img
-              src="/image/arrow-right_footer.png"
-              class="h-[20px] w-[20px] mr-[14px]"
-              alt="Logo"
-            />
-          </div>
+          <form @submit.prevent="handleSubmission">
+            <div
+              class="flex rounded-lg mt-4 lg:mt-3 w-full bg-transparent border-gray-100 border-[1px] flex-wrap flex-row justify-between items-center"
+            >
+              <input
+                type="email"
+                v-model="email"
+                class="bg-transparent w-[270px] lg:w-[300px] input-footer 2xl:w-[25vw] rounded-lg py-4 pl-[14px]"
+                :placeholder="`${$t(`placeholder_footer`)}`"
+              />
+
+              <div v-if="icon === true">
+                <img
+                  :src="`/image/icon-check-white.png`"
+                  class="h-[24px] w-[24px] mr-3"
+                  alt="logo"
+                />
+              </div>
+              <div v-else class="flex flex-wrap flex-row items-center">
+                <button @click="submit">
+                  <img
+                    src="/image/arrow-right_footer.png"
+                    class="h-[20px] w-[20px] mr-[14px]"
+                    alt="Logo"
+                  />
+                </button>
+              </div>
+            </div>
+            <span class="text-[12px] text-[#EF5350]" v-if="msg.email">{{
+              msg.email
+            }}</span>
+          </form>
         </div>
       </div>
     </div>
@@ -114,5 +132,39 @@
   </footer>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      email: "",
+      msg: [],
+      icon: false,
+    };
+  },
+  watch: {
+    email(value) {
+      // binding this to the data value in the email input
+      // this.email = value;
+      this.validateEmail(value);
+    },
+  },
+  methods: {
+    validateEmail(value) {
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+        this.msg["email"] = "";
+      } else {
+        this.msg["email"] = "Invalid Email";
+      }
+    },
+    handleSubmission() {
+      if (this.email == "") {
+        this.msg["email"] = "Invalid Email";
+      } else {
+        this.icon = true;
+        alert(`Email: ${this.email} `);
+        this.email = "";
+        setTimeout(() => (this.icon = false), 2000);
+      }
+    },
+  },
+};
 </script>

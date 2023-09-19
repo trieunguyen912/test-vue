@@ -3,6 +3,9 @@ export default {
   el: "#app",
   data() {
     return {
+      email: "",
+      msg: [],
+      icon: false,
       scTimer: 0,
       scY: 0,
     };
@@ -10,7 +13,31 @@ export default {
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
   },
+  watch: {
+    email(value) {
+      // binding this to the data value in the email input
+      // this.email = value;
+      this.validateEmail(value);
+    },
+  },
   methods: {
+    validateEmail(value) {
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+        this.msg["email"] = "";
+      } else {
+        this.msg["email"] = "Invalid Email";
+      }
+    },
+    handleSubmission() {
+      if (this.email == "") {
+        this.msg["email"] = "Invalid Email";
+      } else {
+        this.icon = true;
+        alert(`Email: ${this.email} `);
+        this.email = "";
+        setTimeout(() => (this.icon = false), 2000);
+      }
+    },
     handleScroll: function () {
       if (this.scTimer) return;
       this.scTimer = setTimeout(() => {
@@ -45,7 +72,7 @@ export default {
       class="pt-6 relative lg:pt-[80px] 2xl:pt-[132px] flex flex-wrap flex-col justify-center items-center"
     >
       <div
-        v-motion-roll-left
+        v-motion-slide-bottom
         class="title-content text-white text-center px-6 pb-3"
       >
         {{ $t("title_hero1") }}<br class="md:hidden" />
@@ -54,29 +81,48 @@ export default {
       <div
         class="flex flex-wrap flex-col xl:backdrop-blur-[5px] xl:rounded-t-[80%] justify-center items-center xl:rounded-b-[80%] z-10 px-6 pt-6 pb-4 xl:px-30 xl:pt-5 xl:pb-[100px] 2xl:px-60 2xl:pt-10 2xl:pb-[200px]"
       >
-        <Counter v-motion-roll-bottom date="October 20, 2023" />
+        <Counter v-motion-slide-bottom date="October 20, 2023" />
 
         <div
-          v-motion-roll-right
+          v-motion-slide-bottom
           class="text-sm xl:w-[400px] 2xl:w-[600px] pt-10 2xl:pt-0 text-white text-center"
         >
           {{ $t("content_hero") }}
         </div>
-        <div
-          v-motion-roll-bottom
-          class="flex rounded-xl xl:w-[400px] 2xl:w-[600px] mt-4 xl:mt-7 bg-white flex-wrap flex-row justify-between items-center"
-        >
-          <input
-            v-model="message"
-            class="rounded-xl 2xl:w-[25vw] input py-4 pl-[14px]"
-            :placeholder="`${$t(`placeholder`)}`"
-          />
-          <img
-            src="/image/icon_arrow_right.png"
-            class="h-[20px] w-[20px] mr-[14px]"
-            alt="Logo"
-          />
-        </div>
+        <form @submit.prevent="handleSubmission">
+          <div
+            v-motion-slide-bottom
+            class="flex rounded-xl xl:w-[400px] 2xl:w-[600px] mt-4 xl:mt-7 bg-white flex-wrap flex-row justify-between items-center"
+          >
+            <input
+              type="email"
+              v-model="email"
+              class="rounded-xl lg:w-[300px] 2xl:w-[25vw] input py-4 pl-[14px]"
+              :placeholder="`${$t(`placeholder`)}`"
+            />
+
+            <div v-if="icon === true">
+              <img
+                :src="`/image/tick.svg`"
+                class="h-[24px] w-[24px] mr-3"
+                alt="logo"
+              />
+            </div>
+            <div v-else class="flex flex-wrap flex-row items-center">
+              <button @click="submit">
+                <img
+                  src="/image/icon_arrow_right.png"
+                  class="h-[20px] w-[20px] mr-[14px]"
+                  alt="Logo"
+                />
+              </button>
+            </div>
+          </div>
+
+          <span class="text-[12px] text-[#EF5350]" v-if="msg.email">{{
+            msg.email
+          }}</span>
+        </form>
       </div>
       <div class="px-4">
         <img
